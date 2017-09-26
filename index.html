@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Copy 05</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+	<section class="card-bg">
+
+		<div class="location" title="Location">
+			<span class="l-icon">
+				<img src="img/navigation.png" alt="Location">
+			</span>
+			<span class="l-text">
+				<h3>Cambridge, England</h3>
+			</span>
+		</div>
+
+		<div class="verified" title="Verified Profile">
+			<img src="img/tick.png" alt="Verified Profile">			
+		</div>
+
+		<div class="avatar-circle" title="Benedict Cumberbatch">
+			<div class="inner-avatar">
+				<img src="img/avatar.png" alt="Benedict Cumberbatch">
+			</div>
+		</div>
+
+		<div class="profile-desc">
+			
+			<h1 class="f-name">Benedict Cumberbatch</h1>
+
+			<p>Benedict Timothy Carlton Cumberbatch was born and raised in London, England.</p>
+
+			<a class="btn noselect follow-btn">Follow</a>
+
+		</div>
+
+		<div class="bottom-bar">
+			
+			<div class="bb-buttun bbb1">
+				<span class="icon">
+					<img src="img/picture.png" alt="Posts">
+				</span>
+				<span class="bb-text">
+					<span class="red-text">Posts</span> 546</span>
+			</div>
+			
+			<div class="bb-buttun bbb2">
+				<span class="icon">
+					<img src="img/like.png" alt="Favorites">
+				</span>
+				<span class="bb-text">
+					<span class="red-text">Favorites</span> 5,406</span>
+			</div>
+			
+			<div class="bb-buttun bbb3">
+				<span class="icon">
+					<img src="img/plane.png" alt="Messages">
+				</span>
+				<span class="bb-text">
+					<span class="red-text">Messages</span> 1,546</span>
+			</div>
+
+		</div>
+		
+	</section>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$('a.btn').on("click", function () {
+			$this = $(this);
+			if ($this.hasClass('follow-btn')){
+				$this.removeClass("follow-btn").addClass("unfollow-btn").text('Following');
+			} else if ($this.hasClass('unfollow-btn')) {
+				$(this).removeClass("unfollow-btn").addClass("follow-btn").text('Follow');
+			}
+		});
+	</script>
+
+</body>
+</html>
